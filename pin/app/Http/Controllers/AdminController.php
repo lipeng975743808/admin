@@ -7,12 +7,6 @@ use App\Http\Controllers;
 
 class AdminController extends Controller
 {
-	/*
-	 * 	登录页面 
-	*/
-	public function login(){
-		return view('admin/login');
-	}
     /**
      * 首页
      */

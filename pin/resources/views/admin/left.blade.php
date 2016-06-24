@@ -45,15 +45,18 @@
 						src="{{URL::asset('')}}img/coin222.png" /><a class="cks" href="{{url('list1')}}"
 						target="main">企业列表</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
 				</dd>
+			</dl>
+			<dl class="system_log">
+				<dt>
+					<img class="icon1" src="{{URL::asset('')}}img/coin05.png" /><img class="icon2"
+						src="{{URL::asset('')}}img/coin06.png" /> 职位管理<img class="icon3"
+						src="{{URL::asset('')}}img/coin19.png" /><img class="icon4"
+						src="{{URL::asset('')}}img/coin20.png" />
+				</dt>
 				<dd>
 					<img class="coin11" src="{{URL::asset('')}}img/coin111.png" /><img class="coin22"
-						src="{{URL::asset('')}}img/coin222.png" /><a class="cks" href="{{url('shenhe')}}"
-						target="main">职位审核</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
-				</dd>
-				<dd>
-					<img class="coin11" src="{{URL::asset('')}}img/coin111.png" /><img class="coin22"
-						src="{{URL::asset('')}}img/coin222.png" /><a class="cks" href="{{url('guwen')}}"
-						target="main">企业顾问</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
+						src="{{URL::asset('')}}img/coin222.png" /><a class="cks" href="{{url('job_list')}}"
+						target="main">职位列表</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
 				</dd>	
 			</dl>
 			<dl class="system_log">
@@ -68,9 +71,17 @@
 						src="{{URL::asset('')}}img/coin222.png" /><a href="{{url('user_list')}}" target="main"
 						class="cks">会员列表</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
 				</dd>
+			</dl>
+			<dl class="system_log">
+				<dt>
+					<img class="icon1" src="{{URL::asset('')}}img/coin07.png" /><img class="icon2"
+						src="{{URL::asset('')}}img/coin08.png" /> 简历管理<img class="icon3"
+						src="{{URL::asset('')}}img/coin19.png" /><img class="icon4"
+						src="{{URL::asset('')}}img/coin20.png" />
+				</dt>
 				<dd>
 					<img class="coin11" src="{{URL::asset('')}}img/coin111.png" /><img class="coin22"
-						src="{{URL::asset('')}}img/coin222.png" /><a href="{{url('user_list')}}" target="main"
+						src="{{URL::asset('')}}img/coin222.png" /><a href="{{url('resume_list')}}" target="main"
 						class="cks">简历列表</a><img class="icon5" src="{{URL::asset('')}}img/coin21.png" />
 				</dd>
 			</dl>

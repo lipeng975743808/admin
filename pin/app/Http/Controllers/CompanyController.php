@@ -21,21 +21,4 @@ class CompanyController extends Controller
         //echo 1;die;
         return view('company/connoisseuradd');
     }
-    
-    /**
-     * 职位审核
-     */
-    public function shenhe()
-    {
-        
-        return view('company/opinion');
-    }
-    /**
-     * 企业顾问
-     */
-    public function guwen()
-    {
-        
-        return view('company/list1');
-    }
 }

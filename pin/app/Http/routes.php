@@ -11,7 +11,7 @@
 |
 */
 //admin控制器 
-Route::get('/',"AdminController@login");
+Route::get('/',"LoginController@login");
 Route::get('admin',"AdminController@index");
 Route::any('head',"AdminController@head");
 Route::any('left',"AdminController@left");
@@ -20,15 +20,15 @@ Route::any('user',"AdminController@gly");
 
 //company控制器
 Route::get('list1',"CompanyController@list1");
-Route::any('shenhe',"CompanyController@shenhe");
-Route::any('guwen',"CompanyController@guwen");
+/*Route::any('shenhe',"CompanyController@shenhe");
+Route::any('guwen',"CompanyController@guwen");*/
 Route::any('connoisseuradd',"CompanyController@connoisseuradd");
-Route::any('banneradd',"AdController@banner");
+//Route::any('banneradd',"AdController@banner");
 
 
 //user控制器
-Route::get('user_list',"UserController@user");
-Route::any('user_jl',"UserController@jianli");
+Route::get('user_list',"UserController@user_list");
+
 
 //ad控制器
 Route::get('ad_list',"AdController@ad_list");
@@ -37,6 +37,13 @@ Route::any('ad_add',"AdController@ad_add");
 //system控制器
 Route::get('update',"SystemController@update");
 Route::any('backup',"SystemController@backup");
+
+//resume控制器
+Route::get('resume_list',"ResumeController@resume_list");
+//Route::any('backup',"SystemController@backup");
+//job控制器
+Route::get('job_list',"JobController@job_list");
+//Route::any('backup',"SystemController@backup");
 /*
 |--------------------------------------------------------------------------
 | Application Routes

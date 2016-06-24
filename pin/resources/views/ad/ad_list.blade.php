@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>行家-有点</title>
+<title>广告-有点</title>
 <link rel="stylesheet" type="text/css" href="css/css.css" />
 <script type="text/javascript" src="js/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="js/page.js" ></script> -->
@@ -16,76 +16,46 @@
 					href="#">公共管理</a>&nbsp;-</span>&nbsp;意见管理
 			</div>
 		</div>
-
 		<div class="page">
 			<!-- banner页面样式 -->
-			<div class="connoisseur">
-				<div class="conform">
-					<form>
-						<div class="cfD">
-							工作年限：<select><option>1年以内</option></select> 审核状态：<label><input
-								type="radio" checked="checked" name="styleshoice1" />&nbsp;未审核</label> <label><input
-								type="radio" name="styleshoice1" />&nbsp;已通过</label> <label class="lar"><input
-								type="radio" name="styleshoice1" />&nbsp;不通过</label> 推荐状态：<label><input
-								type="radio" checked="checked" name="styleshoice2" />&nbsp;是</label><label><input
-								type="radio" name="styleshoice2" />&nbsp;否</label>
-						</div>
-						<div class="cfD">
-							<input class="addUser" type="text" placeholder="输入用户名/ID/手机号/城市" />
-							<button class="button">搜索</button>
-							<a class="addA addA1" href="connoisseuradd.html">添加行家+</a>
-						</div>
-					</form>
+			<div class="banner">
+				<div class="add">
+					<a class="addA" href="{{url('banneradd')}}">上传广告&nbsp;&nbsp;+</a>
 				</div>
 				<!-- banner 表格 显示 -->
-				<div class="conShow">
+				<div class="banShow">
 					<table border="1" cellspacing="0" cellpadding="0">
 						<tr>
 							<td width="66px" class="tdColor tdC">序号</td>
-							<td width="170px" class="tdColor">头像</td>
-							<td width="135px" class="tdColor">姓名</td>
-							<td width="145px" class="tdColor">手机号码</td>
-							<td width="140px" class="tdColor">所在城市</td>
-							<td width="140px" class="tdColor">任职机构</td>
-							<td width="145px" class="tdColor">行家头衔</td>
-							<td width="150px" class="tdColor">本周预约次数</td>
-							<td width="140px" class="tdColor">可约时段</td>
-							<td width="140px" class="tdColor">审核状态</td>
-							<td width="150px" class="tdColor">是否推荐</td>
-							<td width="130px" class="tdColor">操作</td>
+							<td width="315px" class="tdColor">图片</td>
+							<td width="308px" class="tdColor">名称</td>
+							<td width="450px" class="tdColor">链接</td>
+							<td width="215px" class="tdColor">是否显示</td>
+							<td width="180px" class="tdColor">排序</td>
+							<td width="125px" class="tdColor">操作</td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td><div class="onsImg">
+							<td><div class="bsImg">
 									<img src="img/banimg.png">
 								</div></td>
-							<td>山下就只</td>
-							<td>13312345678</td>
-							<td>南京市</td>
-							<td>南京设疑网络科技公司哈哈哈</td>
-							<td>总监</td>
-							<td>3次</td>
-							<td>周一周二周三</td>
-							<td>未审核</td>
-							<td>否</td>
+							<td>双十一连天购</td>
+							<td><a class="bsA" href="#">http://www.sdfsdfsdfds.com</a></td>
+							<td>是</td>
+							<td>1</td>
 							<td><a href="{{url('connoisseuradd')}}"><img class="operation"
 									src="img/update.png"></a> <img class="operation delban"
 								src="img/delete.png"></td>
 						</tr>
 						<tr>
 							<td>1</td>
-							<td><div class="onsImg">
+							<td><div class="bsImg">
 									<img src="img/banimg.png">
 								</div></td>
-							<td>山下就只</td>
-							<td>13312345678</td>
-							<td>南京市</td>
-							<td>南京设疑网络科技公司哈哈哈</td>
-							<td>总监</td>
-							<td>3次</td>
-							<td>周一周二周三</td>
-							<td>未审核</td>
-							<td>否</td>
+							<td>双十一连天购</td>
+							<td><a class="bsA" href="#">http://www.sdfsdfsdfds.com</a></td>
+							<td>是</td>
+							<td>1</td>
 							<td><a href="{{url('connoisseuradd')}}"><img class="operation"
 									src="img/update.png"></a> <img class="operation delban"
 								src="img/delete.png"></td>
@@ -109,7 +79,7 @@
 			</div>
 			<p class="delP1">你确定要删除此条记录吗？</p>
 			<p class="delP2">
-				<a href="#" class="ok yes">确定</a><a class="ok no">取消</a>
+				<a href="#" class="ok yes" onclick="del()">确定</a><a class="ok no">取消</a>
 			</p>
 		</div>
 	</div>
@@ -128,5 +98,21 @@ $(".no").click(function(){
   $(".banDel").hide();
 });
 // 广告弹出框 end
+
+function del(){
+    var input=document.getElementsByName("check[]");
+    for(var i=input.length-1; i>=0;i--){
+       if(input[i].checked==true){
+           //获取td节点
+           var td=input[i].parentNode;
+          //获取tr节点
+          var tr=td.parentNode;
+          //获取table
+          var table=tr.parentNode;
+          //移除子节点
+          table.removeChild(tr);
+        }
+    }     
+}
 </script>
 </html>
