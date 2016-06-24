@@ -7,6 +7,7 @@ use App\Http\Controllers;
 
 class AdminController extends Controller
 {
+    
     /**
      * 首页
      */
