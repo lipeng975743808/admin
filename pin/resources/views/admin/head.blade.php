@@ -40,6 +40,9 @@
 	</div>
 
 
-
+	<link href="{{URL::asset('')}}css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="{{URL::asset('')}}js/jquery.datePicker-min.js" type="text/javascript"></script>
+	<script src="{{URL::asset('')}}js/jquery.twbsPagination.js" type="text/javascript"></script>
+	
 </body>
 </html>

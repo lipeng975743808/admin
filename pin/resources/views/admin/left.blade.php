@@ -13,7 +13,7 @@
 	<div class="container">
 
 		<div class="leftsidebar_box">
-			<a href="../main.html" target="main"><div class="line">
+			<a href="main.png" target="main"><div class="line">
 					<img src="{{URL::asset('')}}img/coin01.png" />&nbsp;&nbsp;首页
 				</div></a>
 			<!-- <dl class="system_log">
