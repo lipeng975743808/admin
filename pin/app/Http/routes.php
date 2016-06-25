@@ -12,11 +12,12 @@
 */
 //admin控制器 
 Route::get('/',"LoginController@login");
-Route::get('admin',"AdminController@index");
+Route::any('admin',"AdminController@index");
 Route::any('head',"AdminController@head");
 Route::any('left',"AdminController@left");
 Route::any('right',"AdminController@right");
 Route::any('user',"AdminController@gly");
+Route::any('main',"AdminController@main");
 
 //company控制器
 Route::get('list1',"CompanyController@list1");
@@ -36,6 +37,7 @@ Route::any('ad_add',"AdController@ad_add");
 
 //system控制器
 Route::get('update',"SystemController@update");
+Route::get('logout',"LoginController@login");
 Route::any('backup',"SystemController@backup");
 
 //resume控制器

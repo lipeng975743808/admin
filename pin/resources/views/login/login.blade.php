@@ -3,16 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>登录-有点</title>
-<link rel="stylesheet" type="text/css" href="css/public.css" />
-<link rel="stylesheet" type="text/css" href="css/page.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/public.js"></script>
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/public.css" />
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/page.css" />
+<script type="text/javascript" src="{{URL::asset('')}}js/jquery.min.js"></script>
+<script type="text/javascript" src="{{URL::asset('')}}js/public.js"></script>
 </head>
 <body>
 
 	<!-- 登录页面头部 -->
 	<div class="logHead">
-		<img src="img/logLOGO.png" />
+		<img src="{{URL::asset('')}}img/logLOGO.png" />
 	</div>
 	<!-- 登录页面头部结束 -->
 
@@ -20,7 +20,7 @@
 	<form action="{{url('admin')}}" method="get">
 	<!-- <input type="hidden" name="_token" value="{{csrf_token()}}"/> -->
 	<div class="logDiv">
-		<img class="logBanner" src="img/logBanner.png" />
+		<img class="logBanner" src="{{URL::asset('')}}img/logBanner.png" />
 		<div class="logGet">
 			<!-- 头部提示信息 -->
 			<div class="logD logDtip">
@@ -29,18 +29,18 @@
 			</div>
 			<!-- 输入框 -->
 			<div class="lgD">
-				<img class="img1" src="img/logName.png" /><input type="text"
+				<img class="img1" src="{{URL::asset('')}}img/logName.png" /><input type="text"
 					placeholder="输入用户名" />
 			</div>
 			<div class="lgD">
 
-				<img class="img1" src="img/logPwd.png" /><input type="text"
+				<img class="img1" src="{{URL::asset('')}}img/logPwd.png" /><input type="text"
 					placeholder="输入用户密码" />
 			</div>
 			<div class="lgD logD2">
 				<input class="getYZM" type="text" />
 				<div class="logYZM">
-					<img class="yzm" src="img/logYZM.png" />
+					<img class="yzm" src="{{URL::asset('')}}img/logYZM.png" />
 				</div>
 			</div>
 			<div class="logC">

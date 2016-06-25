@@ -3,11 +3,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>会员管理-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<link rel="stylesheet" type="text/css" href="css/manhuaDate.1.0.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/manhuaDate.1.0.js"></script>
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/css.css" />
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/manhuaDate.1.0.css">
+	<script type="text/javascript" src="{{URL::asset('')}}js/jquery.min.js"></script>
+	<script type="text/javascript" src="{{URL::asset('')}}js/manhuaDate.1.0.js"></script>
+	<script type="text/javascript" src="{{URL::asset('')}}js/jquery-1.7.2.min.js"></script>
 	<!-- <script type="text/javascript" src="js/page.js" ></script> -->
 	<script type="text/javascript">
 $(function (){
@@ -28,7 +28,7 @@ $(function (){
 	<div id="pageAll">
 		<div class="pageTop">
 			<div class="page">
-				<img src="img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
+				<img src="{{URL::asset('')}}img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
 					href="#">公共管理</a>&nbsp;-</span>&nbsp;意见管理
 			</div>
 		</div>
@@ -66,7 +66,7 @@ $(function (){
 						<tr>
 							<td>1</td>
 							<td><div class="onsImg onsImgv">
-									<img src="img/banimg.png">
+									<img src="{{URL::asset('')}}img/banimg.png">
 								</div></td>
 							<td>山下就只</td>
 							<td>13312345678</td>
@@ -75,8 +75,8 @@ $(function (){
 								class="vsAdd">增加</a></td>
 							<td>总监</td>
 							<td><a href="connoisseuradd.html"><img class="operation"
-									src="img/update.png"></a> <img class="operation delban"
-								src="img/delete.png"></td>
+									src="{{URL::asset('')}}img/update.png"></a> <img class="operation delban"
+								src="{{URL::asset('')}}img/delete.png"></td>
 						</tr>
 					</table>
 					<div class="paging">此处是分页</div>
@@ -93,7 +93,7 @@ $(function (){
 	<div class="banDel">
 		<div class="delete">
 			<div class="close">
-				<a><img src="img/shanchu.png" /></a>
+				<a><img src="{{URL::asset('')}}img/shanchu.png" /></a>
 			</div>
 			<p class="delP1">你确定要删除此条记录吗？</p>
 			<p class="delP2">

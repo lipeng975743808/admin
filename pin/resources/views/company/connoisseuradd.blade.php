@@ -3,14 +3,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>行家添加-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/css.css" />
+<script type="text/javascript" src="{{URL::asset('')}}js/jquery.min.js"></script>
 </head>
 <body>
 	<div id="pageAll">
 		<div class="pageTop">
 			<div class="page">
-				<img src="img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
+				<img src="{{URL::asset('')}}img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;<a
 					href="#">公共管理</a>&nbsp;-</span>&nbsp;行家添加
 			</div>
 		</div>
@@ -24,7 +24,7 @@
 					<div class="bbD">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;头像：
 						<div class="vipHead vipHead1">
-							<img src="img/userPICS.png" />
+							<img src="{{URL::asset('')}}img/userPICS.png" />
 							<p class="vipP">更换头像</p>
 							<input class="file1" type="file" />
 						</div>

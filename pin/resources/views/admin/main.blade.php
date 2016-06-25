@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>首页引用-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/css.css" />
 </head>
 
 <body>
@@ -11,7 +11,7 @@
 		<div class="page">
 			<!-- main页面样式 -->
 			<div class="indexL">
-				<img class="indexBn" src="img/indexBanner.png" />
+				<img class="indexBn" src="{{asset('img/main.png')}}" />
 			</div>
 			<!-- main页面样式end -->
 		</div>

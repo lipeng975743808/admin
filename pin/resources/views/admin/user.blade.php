@@ -3,8 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>管理员管理-有点</title>
-<link rel="stylesheet" type="text/css" href="css/css.css" />
-<script type="text/javascript" src="js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{{URL::asset('')}}css/css.css" />
+<script type="text/javascript" src="{{URL::asset('')}}js/jquery.min.js"></script>
 <!-- <script type="text/javascript" src="js/page.js" ></script> -->
 </head>
 
@@ -12,7 +12,7 @@
 	<div id="pageAll">
 		<div class="pageTop">
 			<div class="page">
-				<img src="img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;-</span>&nbsp;管理员管理
+				<img src="{{URL::asset('')}}img/coin02.png" /><span><a href="#">首页</a>&nbsp;-&nbsp;-</span>&nbsp;管理员管理
 			</div>
 		</div>
 
@@ -44,8 +44,8 @@
 							<td>山下就只</td>
 							<td>2015-25-36 12:12</td>
 							<td><a href="{{url('connoisseuradd')}}"><img class="operation"
-									src="img/update.png"></a> <img class="operation delban"
-								src="img/delete.png"></td>
+									src="{{URL::asset('')}}img/update.png"></a> <img class="operation delban"
+								src="{{URL::asset('')}}img/delete.png"></td>
 						</tr>
 					</table>
 					<div class="paging">此处是分页</div>

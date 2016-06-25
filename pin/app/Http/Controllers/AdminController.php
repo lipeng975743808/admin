@@ -13,7 +13,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-        
         return view('admin/index');
     }
     /**
@@ -49,4 +48,11 @@ class AdminController extends Controller
         return view('admin/right');
     }
 
+    /*
+     * main 
+     */
+    public function main()
+    {
+        return view('admin/main');
+    }
 }

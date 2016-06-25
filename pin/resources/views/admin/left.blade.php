@@ -13,7 +13,7 @@
 	<div class="container">
 
 		<div class="leftsidebar_box">
-			<a href="main.png" target="main"><div class="line">
+			<a href="{{url('main')}}" target="main"><div class="line">
 					<img src="{{URL::asset('')}}img/coin01.png" />&nbsp;&nbsp;首页
 				</div></a>
 			<!-- <dl class="system_log">
@@ -174,7 +174,7 @@
 				</dd>
 				<dd>
 					<img class="coin11" src="{{URL::asset('')}}img/coin111.png" /><img class="coin22"
-						src="{{URL::asset('')}}img/coin222.png" /><a href="{{url('/')}}" class="cks">退出</a><img
+						src="{{URL::asset('')}}img/coin222.png" /><a href="{{url('logout')}}" target="_parent" class="cks">退出</a><img
 						class="icon5" src="{{URL::asset('')}}img/coin21.png" />
 				</dd>
 			</dl>
