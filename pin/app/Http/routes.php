@@ -21,6 +21,7 @@ Route::any('main',"AdminController@main");
 
 //company控制器
 Route::get('list1',"CompanyController@list1");
+Route::post('seek',"CompanyController@seek");
 /*Route::any('shenhe',"CompanyController@shenhe");
 Route::any('guwen',"CompanyController@guwen");*/
 Route::any('connoisseuradd',"CompanyController@connoisseuradd");
