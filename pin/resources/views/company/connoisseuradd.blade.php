@@ -25,35 +25,35 @@
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;头像：
 						<div class="vipHead vipHead1">
 							<img src="{{URL::asset('')}}img/userPICS.png" />
-							<p class="vipP">更换头像</p>
+							<p class="vipP">Log</p>
 							<input class="file1" type="file" />
 						</div>
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行家名称：<input type="text"
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司名称：<input type="text"
 							class="input3" />
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;手机号码：<input type="text"
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系方式：<input type="text"
 							class="input3" />
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行家头衔：<input type="text"
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司邮箱：<input type="text"
 							class="input3" />
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;任职机构：<input type="text"
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司规模：<input type="text"
 							class="input3" />
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;工作年限：<select class="input3"><option>1年以内</option></select>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所属领域：<select class="input3"><option>1年以内</option></select>
 					</div>
 					<div class="bbD">
 						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;所在城市：<input class="input3"
 							type="text" />
 					</div>
 					<div class="bbD">
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;行家标签：<input class="input3"
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;公司简称：<input class="input3"
 							type="text" />
 					</div>
 					<div class="bbD">
