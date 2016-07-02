@@ -34,7 +34,14 @@ Route::get('user_list',"UserController@user_list");
 
 //ad控制器
 Route::get('ad_list',"AdController@ad_list");
+Route::get('ad_list/{id}',"AdController@ad_list");
 Route::any('ad_add',"AdController@ad_add");
+Route::any('banneradd',"AdController@ad_add");
+Route::post('accept',"AdController@add_ad");
+Route::post('status',"AdController@upd_sta");
+Route::post('upd_sort',"AdController@update_sort");
+Route::post('del_ad',"AdController@delete_ad");
+
 
 //system控制器
 Route::get('update',"SystemController@update");
