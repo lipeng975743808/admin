@@ -42,6 +42,8 @@ Route::any('backup',"SystemController@backup");
 
 //resume控制器
 Route::get('resume_list',"ResumeController@resume_list");
+Route::get('resume_statu',"ResumeController@resume_statu");
+Route::any('resume_search',"ResumeController@resume_ss");
 //Route::any('backup',"SystemController@backup");
 //job控制器
 Route::get('job_list',"JobController@job_list");
