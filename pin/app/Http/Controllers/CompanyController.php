@@ -13,7 +13,7 @@ class CompanyController extends Controller
 	public function list1($p=1)
     {
         // echo 1;die;
-        $company = DB::table('kp_company_info')->get();
+        $company = DB::table('company_info')->get();
         // print_r($company);die;
         $count = count($company);//总条数
         //每页显示的条数
