@@ -4,8 +4,14 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Kp_user extends Authenticatable
 {
+    public $table='kp_user';
+    public function selectall()
+    {
+        $arr=$this->all();
+        return $arr;
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -20,7 +26,5 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
+    protected $hidden = [];
 }

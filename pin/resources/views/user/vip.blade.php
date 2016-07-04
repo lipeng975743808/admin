@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="{{URL::asset('')}}js/jquery.min.js"></script>
 	<script type="text/javascript" src="{{URL::asset('')}}js/manhuaDate.1.0.js"></script>
 	<script type="text/javascript" src="{{URL::asset('')}}js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="{{URL::asset('')}}js/jquery1.8.js"></script>
 	<!-- <script type="text/javascript" src="js/page.js" ></script> -->
 	<script type="text/javascript">
 $(function (){
@@ -44,9 +45,10 @@ $(function (){
 						</div>
 						<div class="cfD">
 							<input class="addUser" type="text" placeholder="输入用户名/ID/手机号/城市" />
-							<button class="button">搜索</button>
-							<a class="addA addA1" href="vipadd.html">新增会员+</a> <a
-								class="addA addA1 addA2" href="vipadd.html">密码重置</a>
+							<!-- <button class="button" onclick="bu()">搜索</button> -->
+							<input type="button" class="button" value="搜索" />
+							<a class="addA addA1" href="vipadd.html">新增会员+</a>
+							 <a class="addA addA1 addA2" href="vipadd.html">密码重置</a>
 						</div>
 					</form>
 				</div>
@@ -63,23 +65,30 @@ $(function (){
 							<td width="282px" class="tdColor">注册时间</td>
 							<td width="130px" class="tdColor">操作</td>
 						</tr>
-						<tr>
-							<td>1</td>
+						@foreach($arr as $val)
+						<tr class="trs" id="a_{{$val->u_id}}">
+							<td>{{$val->u_id}}</td>
 							<td><div class="onsImg onsImgv">
 									<img src="{{URL::asset('')}}img/banimg.png">
 								</div></td>
-							<td>山下就只</td>
-							<td>13312345678</td>
-							<td>南京市</td>
+							<td>{{$val->i_name}}</td>
+							<td>{{$val->iphone}}</td>
+							<td>{{$val->i_native}}</td>
 							<td>0.00<input class="vipinput" type="text" /><a
 								class="vsAdd">增加</a></td>
-							<td>总监</td>
-							<td><a href="connoisseuradd.html"><img class="operation"
-									src="{{URL::asset('')}}img/update.png"></a> <img class="operation delban"
-								src="{{URL::asset('')}}img/delete.png"></td>
+							<td>{{$val->birth_date}}</td>
+							<td>
+								<input type="hidden" id='haha' value="{{$val->u_id}}" />
+								<a href="connoisseuradd.html">
+									<img class="operation" src="{{URL::asset('')}}img/update.png">
+								</a>
+								    <img class="operation delban" src="{{URL::asset('')}}img/delete.png">
+							</td>
 						</tr>
+						@endforeach
 					</table>
-					<div class="paging">此处是分页</div>
+					<div class="paging"><?php echo $str?></div>
+					<div id="divs"></div>
 				</div>
 				<!-- vip 表格 显示 end-->
 			</div>
@@ -91,23 +100,88 @@ $(function (){
 
 	<!-- 删除弹出框 -->
 	<div class="banDel">
+		
 		<div class="delete">
 			<div class="close">
 				<a><img src="{{URL::asset('')}}img/shanchu.png" /></a>
 			</div>
 			<p class="delP1">你确定要删除此条记录吗？</p>
+			
 			<p class="delP2">
-				<a href="#" class="ok yes">确定</a><a class="ok no">取消</a>
+				
+				<a href="javascript:del()" class="ok yes">确定</a><a class="ok no">取消</a>
+				
 			</p>
+			
 		</div>
+		
 	</div>
 	<!-- 删除弹出框  end-->
 </body>
-
+<script>
+	function del()
+	{
+		var id =$(".yes").attr('id');
+		$.get("{{url('del')}}",{"id":id},function(msg){
+			 $("#a_"+id).remove();
+			 $(".banDel").hide();
+		})
+	}
+	function page(p)
+	{
+		$.get("{{url('user_list')}}",{"p":p},function(msg){
+			 $("body").html(msg);
+		})
+	}
+	$(".button").click(function(){
+		var pr=$(".addUser").val();
+		$.get("user_search",{"p":pr},function(msg){
+			var ar=eval('('+msg+')');
+			var str='';
+    		for(a in ar )
+    		{
+    				str+='<tr class="trs" id="a_'+ar[a].u_id+'">'
+							str+='<td>'+ar[a].u_id+'</td>'
+							str+='<td><div class="onsImg onsImgv">'
+									str+='<img src="{{URL::asset('')}}img/banimg.png">'
+								str+='</div></td>'
+							str+='<td>'+ar[a].i_name+'</td>'
+							str+='<td>'+ar[a].iphone+'</td>'
+							str+='<td>'+ar[a].i_native+'</td>'
+							str+='<td>0.00<input class="vipinput" type="text" /><a class="vsAdd">增加</a></td>'
+							str+='<td>'+ar[a].birth_date+'</td>'
+							str+='td>'
+								str+='<input type="hidden" id="haha" value="'+ar[a].u_id+'" />'
+								str+='<a href="connoisseuradd.html">'
+									str+='<img class="operation" src="{{URL::asset('')}}img/update.png">'
+								str+='</a>'
+								   str+=' <img class="operation delban" src="{{URL::asset('')}}img/delete.png">'
+							str+='</td>'
+						str+='</tr>'
+			}
+			var $tr=$("tr").last();
+					$tr.after(str);
+		})
+	})
+// function bu()
+// 	{
+// 		var pr=$(".addUser").val();
+// 		var url="{{url('sel')}}";
+// 		// http://www.insist.com/admin/pin/public/sel
+// 		// alert(url)
+// 		var data={'p':pr};
+// 		$.get(url,data,function(msg){
+// 			  alert(msg)
+// 		})
+// 	}
+</script>
 <script type="text/javascript">
 // 广告弹出框
 $(".delban").click(function(){
-  $(".banDel").show();
+	var a = $(this).parents().parents()
+	var td = a.children("td:eq(0)");
+    $(".yes").attr('id',td.text())
+    $(".banDel").show();
 });
 $(".close").click(function(){
   $(".banDel").hide();

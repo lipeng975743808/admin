@@ -30,7 +30,8 @@ Route::any('connoisseuradd',"CompanyController@connoisseuradd");
 
 //user控制器
 Route::get('user_list',"UserController@user_list");
-
+Route::get('del',"UserController@deletes");
+Route::any('user_search',"UserController@searchs");
 
 //ad控制器
 Route::get('ad_list',"AdController@ad_list");
